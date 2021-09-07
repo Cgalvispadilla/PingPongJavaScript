@@ -1,4 +1,5 @@
-import { Board, BoardView } from "../modelos/Pizarron.js";
+import { Board } from "../modelos/Board.js";
+import { BoardView } from "../vistas/BoardView.js";
 
 window.addEventListener("load", main);
 
