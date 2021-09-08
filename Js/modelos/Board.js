@@ -36,7 +36,7 @@ class Board {
     var elements = this.bars.map(function (bar) {
       return bar;
     });
-    elements.push(this.ball);
+    //elements.push(this.ball);
     return elements;
   }
 }
