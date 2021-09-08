@@ -2,6 +2,7 @@ function draw(cxt, element) {
   switch (element.kind) {
     case "rectangle":
       cxt.fillRect(element.x, element.y, element.width, element.height);
+      cxt.fillStyle = "#FF0000";
       break;
 
     case "circle":
