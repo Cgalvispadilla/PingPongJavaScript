@@ -1,4 +1,4 @@
-import { draw } from "../helpers/draw.js";
+import { draw, hit } from "../helpers/helpers.js";
 class BoardView {
   constructor(canvas, board) {
     this.canvas = canvas;
@@ -16,9 +16,21 @@ class BoardView {
       draw(this.cxt, el);
     }
   }
+  check_collisions() {
+    for (let i = this.board.bars.length - 1; i >= 0; i--) {
+      let bar = this.board.bars[i];
+      if (hit(bar, this.board.ball)) {
+        this.board.ball.collisions(bar);
+      }
+    }
+  }
   play() {
-    this.clean();
-    this.draw();
+    if (this.board.playing) {
+      this.clean();
+      this.draw();
+      this.check_collisions();
+      this.board.ball.move();
+    }
   }
 }
 export { BoardView };

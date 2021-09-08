@@ -12,23 +12,27 @@ let board_view = new BoardView(canvas, board);
 let ball = new Ball(350, 100, 10, board);
 
 document.addEventListener("keydown", (ev) => {
-  ev.preventDefault();
   if (ev.keyCode == 38) {
+    ev.preventDefault();
     bar.up();
-  } else if (ev.keyCode == 40) {
+  } else if (ev.keyCode === 40) {
+    ev.preventDefault();
     bar.down();
-  } else if (ev.keyCode == 87) {
+  } else if (ev.keyCode === 87) {
+    ev.preventDefault();
     bar2.up();
-  } else if (ev.keyCode == 83) {
+  } else if (ev.keyCode === 83) {
+    ev.preventDefault();
     bar2.down();
+  } else if (ev.keyCode === 32) {
+    ev.preventDefault();
+    board.playing = !board.playing;
   }
   console.log(bar2.toString());
 });
 
 window.requestAnimationFrame(controller);
-
 function controller() {
-  board_view.clean();
-  board_view.draw();
+  board_view.play();
   window.requestAnimationFrame(controller);
 }
