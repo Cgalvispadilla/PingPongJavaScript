@@ -6,7 +6,7 @@ import { Ball } from "../modelos/Ball.js";
 let board = new Board(800, 400);
 let bar = new Bar(780, 100, 20, 100, board);
 let bar2 = new Bar(0, 100, 20, 100, board);
-console.log(board);
+//console.log(board);
 let canvas = document.getElementById("canvas");
 let board_view = new BoardView(canvas, board);
 let ball = new Ball(350, 100, 10, board);
@@ -43,4 +43,5 @@ window.requestAnimationFrame(controller);
 function controller() {
   board_view.play();
   window.requestAnimationFrame(controller);
+  console.log(ball.x + "y " + ball.y);
 }

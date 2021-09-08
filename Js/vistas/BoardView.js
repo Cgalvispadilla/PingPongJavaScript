@@ -21,6 +21,8 @@ class BoardView {
       let bar = this.board.bars[i];
       if (hit(bar, this.board.ball)) {
         this.board.ball.collisions(bar);
+      } else {
+        this.board.ball.collision2();
       }
     }
   }

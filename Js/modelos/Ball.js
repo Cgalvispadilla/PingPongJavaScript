@@ -9,7 +9,7 @@ class Ball {
     this.direction = 1;
     this.bounce_angle = 0;
     this.max_bounce_angle = Math.PI / 12;
-    this.speed = 6;
+    this.speed = 5;
 
     board.ball = this;
     this.kind = "circle";
@@ -36,6 +36,14 @@ class Ball {
 
     if (this.x > this.board.width / 2) this.direction = -1;
     else this.direction = 1;
+  }
+  collision2() {
+    if (
+      this.y + this.speed_y > this.board.height - this.radius ||
+      this.y + this.speed_y < this.radius
+    ) {
+      this.speed_y = -this.speed_y;
+    }
   }
 }
 export { Ball };

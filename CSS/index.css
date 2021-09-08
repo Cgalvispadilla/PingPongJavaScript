@@ -1,11 +1,21 @@
-div {
+.general {
+  display: flex;
+  align-items: center;
+}
+.parrafo {
+  width: 20%;
+  height: 50%;
+  align-items: center;
+}
+.juego {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-left: 20px;
 }
 #canvas {
-  background-color: black;
-  border: 2px solid red;
+  background-color: #e5e8e8;
+  border: 2px solid black;
 }
 .volverAJugar {
   margin-top: 10px;
