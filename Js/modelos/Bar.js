@@ -12,3 +12,5 @@ class Bar {
   down() {}
   up() {}
 }
+
+export { Bar };

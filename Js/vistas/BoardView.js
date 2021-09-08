@@ -11,7 +11,6 @@ class BoardView {
   draw() {
     for (var i = this.board.elements.length - 1; i >= 0; i--) {
       var el = this.board.elements[i];
-
       draw(this.cxt, el);
     }
   }
