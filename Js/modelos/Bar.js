@@ -9,6 +9,7 @@ class Bar {
     this.kind = "rectangle";
     this.speed = 10;
   }
+
   down() {
     this.y += this.speed;
   }

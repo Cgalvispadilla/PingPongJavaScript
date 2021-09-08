@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.volverAJugar {
+  margin-top: 10px;
+  text-decoration: none;
+  color: red;
+}

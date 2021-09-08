@@ -14,7 +14,6 @@ function draw(cxt, element) {
 }
 function hit(a, b) {
   //Revisa si a colisiona con b
-  console.log(":(");
   var hit = false;
   //Colisiones hirizontales
   if (b.x + b.width >= a.x && b.x < a.x + a.width) {
