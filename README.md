@@ -6,3 +6,5 @@ Preguntas:
 3. ¿Cuál es la forma de obtener el estado de un CheckBox?
 4. ¿Para qué sirve el método Push en JavaScript?
 5. ¿Cuál es la diferencia entre "==" y "==="?
+
+Para probar el juego entre en el siguiente url: https://cgalvispadilla.github.io/PingPongJavaScript/html/index.html
